@@ -62,4 +62,22 @@ public class Lista01 {
         System.out.println("O número sucessor é " + num);
         scanner.close();
     }
+
+
+    void ex5() {
+        Scanner scanner = new Scanner(System.in);
+
+        double valorM2, valorCalculado, largura, comprimento;
+        
+        System.out.print("Digite o valor do metro quadrado: R$ ");
+        valorM2 = scanner.nextDouble();
+
+        System.out.print("Digite a largura do terreno em metros: ");
+        largura = scanner.nextDouble();
+        System.out.print("Digite o comprimento do terreno em metros: ");
+        comprimento = scanner.nextDouble();
+
+        valorCalculado = valorM2 * comprimento * largura;
+        System.out.println("O valor total do terreno é R$ " + valorCalculado);
+    }
 }
