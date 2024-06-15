@@ -63,7 +63,6 @@ public class Lista01 {
         scanner.close();
     }
 
-
     void ex5() {
         Scanner scanner = new Scanner(System.in);
 
@@ -79,5 +78,21 @@ public class Lista01 {
 
         valorCalculado = valorM2 * comprimento * largura;
         System.out.println("O valor total do terreno é R$ " + valorCalculado);
+        scanner.close();
+    }
+
+    void ex6() {
+        Scanner scanner = new Scanner(System.in);
+
+        float distancia, combustivel, consumoMedio;
+
+        System.out.print("Digite a distância percorrida pelo veículo, em kilômetros: ");
+        distancia = scanner.nextFloat();
+        System.out.print("Digite o total de combustível gasto, em litros: ");
+        combustivel = scanner.nextFloat();
+
+        consumoMedio = combustivel / distancia;
+        System.out.println("O consumo médio durante esse percurso foi de " + consumoMedio + " km/L");
+        scanner.close();
     }
 }
