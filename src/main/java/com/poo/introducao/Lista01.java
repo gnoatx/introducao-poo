@@ -9,9 +9,9 @@ public class Lista01 {
 
         int x, y, sum;
 
-        System.out.print("Digite um número: ");
+        System.out.print("Digite um número inteiro: ");
         x = scanner.nextInt();
-        System.out.print("Digite outro número: ");
+        System.out.print("Digite outro número inteiro: ");
         y = scanner.nextInt();
 
         sum = x + y;
@@ -32,5 +32,27 @@ public class Lista01 {
 
         System.out.println("Bem vindo, " + nome + " " + sobrenome);
         scanner.close();
+    }
+
+    void ex3() {
+        Scanner scanner = new Scanner(System.in);
+
+        double real, dolar;
+
+        System.out.print("Digite um valor em reais: R$ ");
+        real = scanner.nextDouble();
+
+        dolar = real * 5.25;
+
+        System.out.println("O valor convertido para dólares é: US$ " + dolar);
+        scanner.close();
+    }
+
+    void ex4() {
+        Scanner scanner = new Scanner(System.in);
+
+        int num;
+
+        System.out.print("Digite um número inteiro: ");
     }
 }
