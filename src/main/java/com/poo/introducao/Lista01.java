@@ -111,4 +111,17 @@ public class Lista01 {
         System.out.println("A média de suas notas foi " + media);
         scanner.close();
     }
+
+    void ex8() {
+        Scanner scanner = new Scanner(System.in);
+
+        float grauF, grauC;
+
+        System.out.print("Digite uma temperatura em graus Fahrenheit: ");
+        grauF = scanner.nextFloat();
+
+        grauC = (grauF - 32) * 5 / 9;
+        System.out.println("A temperatura convertida para graus Celsius é " + grauC + " °C");
+        scanner.close();
+    }
 }
