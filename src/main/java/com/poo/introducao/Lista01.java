@@ -95,4 +95,20 @@ public class Lista01 {
         System.out.println("O consumo médio durante esse percurso foi de " + consumoMedio + " km/L");
         scanner.close();
     }
+
+    void ex7() {
+        Scanner scanner = new Scanner(System.in);
+
+        float nota1, nota2, nota3, nota4, media;
+
+        System.out.println("Digite suas notas:");
+        nota1 = scanner.nextFloat();
+        nota2 = scanner.nextFloat();
+        nota3 = scanner.nextFloat();
+        nota4 = scanner.nextFloat();
+
+        media = (nota1 + nota2 + nota3 + nota4) / 4;
+        System.out.println("A média de suas notas foi " + media);
+        scanner.close();
+    }
 }
