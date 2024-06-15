@@ -87,10 +87,10 @@ public class IntroducaoApplication {
 
     static void limpa() {
 		try {
-            if (System.getProperty("os.name").contains("Windows")) {
+            if(System.getProperty("os.name").contains("Windows")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else if(System.getProperty("os.name").contains("Linux") || System.getProperty("os.name").contains("Mac")) {
-                    new ProcessBuilder("clear").inheritIO().start().waitFor();
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
             } else {
                 System.out.println("Este comando não funciona no seu sistema operacional.");
             }
