@@ -54,5 +54,12 @@ public class Lista01 {
         int num;
 
         System.out.print("Digite um número inteiro: ");
+        num = scanner.nextInt();
+
+        num--;
+        System.out.println("O número antecessor é " + num);
+        num = num + 2;
+        System.out.println("O número sucessor é " + num);
+        scanner.close();
     }
 }
