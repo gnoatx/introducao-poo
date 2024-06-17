@@ -38,11 +38,12 @@ public class Lista01 {
         Scanner scanner = new Scanner(System.in);
 
         double real, dolar;
+        double valorDolar = 5.25d;
 
         System.out.print("Digite um valor em reais: R$ ");
         real = scanner.nextDouble();
 
-        dolar = real * 5.25;
+        dolar = real * valorDolar;
 
         System.out.println("O valor convertido para dólares é: US$ " + dolar);
         scanner.close();
@@ -58,7 +59,7 @@ public class Lista01 {
 
         num--;
         System.out.println("O número antecessor é " + num);
-        num = num + 2;
+        num += 2;
         System.out.println("O número sucessor é " + num);
         scanner.close();
     }
