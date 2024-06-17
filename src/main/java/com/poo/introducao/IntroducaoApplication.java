@@ -13,17 +13,17 @@ public class IntroducaoApplication {
         limpa();
 
 		Lista01 lista01 = new Lista01();
-
+        //lista01.ex1();
         int opcao;
 
         do {
-            Scanner scanner = new Scanner(System.in);
+            Scanner scannerOpcao = new Scanner(System.in);
 
             System.out.println("Opções:\n\n" +
                                "1 - 8. Executar exercício de número correspondente\n" +
                                "0. Sair do programa");
-            opcao = scanner.nextInt();
-            scanner.close();
+            opcao = scannerOpcao.nextInt();
+            scannerOpcao.close();
 
             limpa();
             switch(opcao) {
