@@ -168,6 +168,7 @@ public class Lista02 {
         System.out.print("Você está de recuperação.\n" +
                          "Digite sua nota de recuperação: ");
         notaRec = sc.nextFloat();
+        sc.close();
         media = (maiorNota + notaRec) / 2;
 
         if (media >= 6) {
@@ -175,10 +176,58 @@ public class Lista02 {
         } else {
             System.out.println("Você reprovou...");
         }
-        sc.close();
     }
 
     void ex7() {
+        Scanner sc = new Scanner(System.in);
+        int numero, divisor;
+        System.out.println("===== Divisibilidade =====\n" +
+                           "Este programa recebe dois números e retorna se o primeiro é divisível pelo segundo.\n");
+        System.out.print("Digite um número inteiro: ");
+        numero = sc.nextInt();
+        System.out.print("Digite um número inteiro para ser seu divisor: ");
+        divisor = sc.nextInt();
+        sc.close();
 
+        if (numero % divisor == 0) {
+            System.out.println("O número " + numero + " é divisível por " + divisor + ".");
+        } else {
+            System.out.println("O número " + numero + " NÃO é divisível por " + divisor + ".");
+        }
+    }
+
+    void ex8() {
+        Scanner sc = new Scanner(System.in);
+        int resposta, erros = 0;
+
+        System.out.println("===== Hora do Quiz =====\n" +
+                           "Este programa é um jogo de perguntas e respostas.\n");
+        System.out.println("Como é o nome do país Holanda em holandês?\n" +
+                           "1. Neverland           2. Nederland\n" +
+                           "3. Holland             4. Netherlands\n\n" +
+                           "Resposta: ");
+        resposta = sc.nextInt();
+        if (resposta != 2) {
+            erros++;
+        }
+
+        System.out.println("Qual destes NÃO é o nome de um personagem da série Super Mario?\n" +
+                           "1. Daisy               2. Kamek\n" +
+                           "3. Birdo               4. Kinsley\n\n" +
+                           "Resposta: ");
+        resposta = sc.nextInt();
+        if (resposta != 4) {
+            erros++;
+        }
+
+        System.out.println("\n" +
+                           "1. Daisy               2. Kamek\n" +
+                           "3. Birdo               4. Kinsley\n\n" +
+                           "Resposta: ");
+        resposta = sc.nextInt();
+        if (resposta != 4) {
+            erros++;
+        }
+        sc.close();
     }
 }
