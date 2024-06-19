@@ -81,9 +81,9 @@ public class Lista02 {
 
         System.out.print("Você é gestante? (s/n): ");
         gestante = scChar.next().charAt(0);
+        scChar.close();
         if (gestante == 's') {
             System.out.println(nome + mensagemPreferencial);
-            scChar.close();
             return;
         }
 
@@ -91,6 +91,6 @@ public class Lista02 {
     }
 
     void ex4() {
-        
+
     }
 }
