@@ -17,7 +17,7 @@ public class Lista01 {
         sum = x + y;
 
         System.out.println("A soma dos números digitados é: " + sum);
-        scanner.close();
+        //scanner.close();
     }
 
     void ex2() {
@@ -31,7 +31,7 @@ public class Lista01 {
         sobrenome = scanner.nextLine();
 
         System.out.println("Bem vindo, " + nome + " " + sobrenome + ".");
-        scanner.close();
+        //scanner.close();
     }
 
     void ex3() {
@@ -46,7 +46,7 @@ public class Lista01 {
         dolar = real * valorDolar;
 
         System.out.println("O valor convertido para dólares é: US$ " + String.format("%.2f", dolar) );
-        scanner.close();
+        //scanner.close();
     }
 
     void ex4() {
@@ -61,7 +61,7 @@ public class Lista01 {
         System.out.println("O número antecessor é " + num);
         num += 2;
         System.out.println("O número sucessor é " + num);
-        scanner.close();
+        //scanner.close();
     }
 
     void ex5() {
@@ -79,7 +79,7 @@ public class Lista01 {
 
         valorCalculado = valorM2 * comprimento * largura;
         System.out.println("O valor total do terreno é R$ " + String.format("%.2f", valorCalculado) );
-        scanner.close();
+        //scanner.close();
     }
 
     void ex6() {
@@ -94,7 +94,7 @@ public class Lista01 {
 
         consumoMedio = distancia / combustivel;
         System.out.println("O consumo médio durante esse percurso foi de " + consumoMedio + " km/L");
-        scanner.close();
+        //scanner.close();
     }
 
     void ex7() {
@@ -110,7 +110,7 @@ public class Lista01 {
 
         media = (nota1 + nota2 + nota3 + nota4) / 4;
         System.out.println("A média de suas notas foi " + String.format("%.2f", media) );
-        scanner.close();
+        //scanner.close();
     }
 
     void ex8() {
@@ -123,6 +123,6 @@ public class Lista01 {
 
         grauC = (grauF - 32) * 5 / 9;
         System.out.println("A temperatura convertida para graus Celsius é " + String.format("%.1f", grauC) + " °C");
-        scanner.close();
+        //scanner.close();
     }
 }
