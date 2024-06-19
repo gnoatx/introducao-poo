@@ -116,6 +116,9 @@ public class Lista02 {
     }
 
     void ex5() {
+        Scanner sc = new Scanner(System.in);
         
+        
+        sc.close();
     }
 }
