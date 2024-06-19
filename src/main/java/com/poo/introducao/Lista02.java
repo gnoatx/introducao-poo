@@ -115,7 +115,7 @@ public class Lista02 {
         }
     }
 
-    void ex5() {
+    void ex6() {
         Scanner sc = new Scanner(System.in);
 
         float nota1, nota2, maiorNota, notaRec, media;
@@ -150,5 +150,9 @@ public class Lista02 {
             System.out.println("Você reprovou...");
         }
         sc.close();
+    }
+
+    void ex7() {
+
     }
 }
