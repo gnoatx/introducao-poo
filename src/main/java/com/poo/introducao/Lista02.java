@@ -2,6 +2,7 @@ package com.poo.introducao;
 
 import java.util.Scanner;
 
+@SuppressWarnings("resource")
 public class Lista02 {
 
     void ex1() {
