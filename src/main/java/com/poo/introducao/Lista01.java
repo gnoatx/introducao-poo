@@ -45,7 +45,7 @@ public class Lista01 {
 
         dolar = real * valorDolar;
 
-        System.out.println("O valor convertido para dólares é: US$ " + dolar);
+        System.out.println("O valor convertido para dólares é: US$ " + String.format("%.2f", dolar) );
         scanner.close();
     }
 
@@ -78,7 +78,7 @@ public class Lista01 {
         comprimento = scanner.nextDouble();
 
         valorCalculado = valorM2 * comprimento * largura;
-        System.out.println("O valor total do terreno é R$ " + valorCalculado);
+        System.out.println("O valor total do terreno é R$ " + String.format("%.2f", valorCalculado) );
         scanner.close();
     }
 
