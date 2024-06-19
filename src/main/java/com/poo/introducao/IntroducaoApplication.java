@@ -12,7 +12,7 @@ public class IntroducaoApplication {
         limpa();
 
 		Lista02 lista = new Lista02(); // <-- Mudar lista aqui
-        lista.ex5();  // <-- Mudar exercício aqui
+        lista.ex6();  // <-- Mudar exercício aqui
 
         System.out.println("Obrigado por utilizar meu programa.");
 	}

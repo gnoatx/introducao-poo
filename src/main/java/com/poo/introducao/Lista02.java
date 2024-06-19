@@ -115,6 +115,32 @@ public class Lista02 {
         }
     }
 
+    void ex5() {
+        Scanner sc = new Scanner(System.in);
+
+        String user = "admin";
+        String senha = "1234";
+        String userDigitado, senhaDigitada;
+
+        System.out.println("===== Login =====\n" +
+                           "Este programa recebe username e senha do usuário e retorna se estão corretos ou não.\n");
+        System.out.print("Digite seu username: ");
+        userDigitado = sc.nextLine();
+        System.out.print("Digite sua senha: ");
+        senhaDigitada = sc.nextLine();
+        sc.close();
+
+        if (!(user.equals(userDigitado)) && !(senha.equals(senhaDigitada))) {
+            System.out.println("Username e senha incorretos.\nO login falhou.");
+        } else if (!(user.equals(userDigitado))) {
+            System.out.println("Username incorreto.\nO login falhou.");
+        } else if (!(senha.equals(senhaDigitada))) {
+            System.out.println("Senha incorreta.\nO login falhou.");
+        } else {
+            System.out.println("Bem vind@, " + user + ".");
+        }
+    }
+
     void ex6() {
         Scanner sc = new Scanner(System.in);
 
