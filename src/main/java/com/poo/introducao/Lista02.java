@@ -119,8 +119,8 @@ public class Lista02 {
     void ex5() {
         Scanner sc = new Scanner(System.in);
 
-        String user = "admin";
-        String senha = "1234";
+        final String USER = "admin";
+        final String SENHA = "1234";
         String userDigitado, senhaDigitada;
 
         System.out.println("===== Login =====\n" +
@@ -129,16 +129,16 @@ public class Lista02 {
         userDigitado = sc.nextLine();
         System.out.print("Digite sua senha: ");
         senhaDigitada = sc.nextLine();
-        //sc.close();
+        // sc.close();
 
-        if (!(user.equals(userDigitado)) && !(senha.equals(senhaDigitada))) {
+        if (!(USER.equals(userDigitado)) && !(SENHA.equals(senhaDigitada))) {
             System.out.println("Username e senha incorretos.\nO login falhou.");
-        } else if (!(user.equals(userDigitado))) {
+        } else if (!(USER.equals(userDigitado))) {
             System.out.println("Username incorreto.\nO login falhou.");
-        } else if (!(senha.equals(senhaDigitada))) {
+        } else if (!(SENHA.equals(senhaDigitada))) {
             System.out.println("Senha incorreta.\nO login falhou.");
         } else {
-            System.out.println("Bem vind@, " + user + ".");
+            System.out.println("Bem vind@, " + USER + ".");
         }
     }
 
@@ -157,31 +157,40 @@ public class Lista02 {
         media = (nota1 + nota2) / 2;
 
         if (media >= 6) {
-            System.out.println("Parabéns! Você está aprovad@!");
+            System.out.println("Parabéns! Você está aprovad@!\n" +
+                               "Média: " + media);
             //sc.close();
             return;
         } else if (maiorNota < 2) {
-            System.out.println("Você reprovou...");
+            System.out.println("Você reprovou...\n" +
+                               "Média: " + media);
             //sc.close();
             return;
         }
 
         System.out.print("Você está de recuperação.\n" +
-                         "Digite sua nota de recuperação: ");
+                         "Média: " + media +
+                         "\nDigite sua nota de recuperação: ");
         notaRec = sc.nextFloat();
         //sc.close();
+        if (notaRec < nota1 && notaRec < nota2) {
+            
+        }
         media = (maiorNota + notaRec) / 2;
 
         if (media >= 6) {
-            System.out.println("Parabéns! Você está aprovad@!");
+            System.out.println("Parabéns! Você está aprovad@!\n" +
+                               "Média: " + media);
         } else {
-            System.out.println("Você reprovou...");
+            System.out.println("Você reprovou...\n" +
+                               "Média: " + media);
         }
     }
 
     void ex7() {
         Scanner sc = new Scanner(System.in);
         int numero, divisor;
+
         System.out.println("===== Divisibilidade =====\n" +
                            "Este programa recebe dois números e retorna se o primeiro é divisível pelo segundo.\n");
         System.out.print("Digite um número inteiro: ");
@@ -199,7 +208,7 @@ public class Lista02 {
 
     public int vidas = 3;
     void ex8() {
-        String mensagem = "Erros máximos excedidos. Você perdeu!";
+        final String MENSAGEM_FALHOU = "Erros máximos excedidos. Você perdeu!";
 
         System.out.println("===== Hora do Quiz =====\n" +
                            "Este programa é um jogo de perguntas e respostas.\n");
@@ -222,7 +231,7 @@ public class Lista02 {
         confereResposta(1);
 
         if (vidas == 0) {
-            System.out.println(mensagem);
+            System.out.println(MENSAGEM_FALHOU);
             return;
         }
 
@@ -233,7 +242,7 @@ public class Lista02 {
         confereResposta(2);
 
         if (vidas == 0) {
-            System.out.println(mensagem);
+            System.out.println(MENSAGEM_FALHOU);
             return;
         }
 
@@ -244,7 +253,7 @@ public class Lista02 {
         confereResposta(4);
 
         if (vidas == 0) {
-            System.out.println(mensagem);
+            System.out.println(MENSAGEM_FALHOU);
             return;
         }
 
