@@ -13,7 +13,7 @@ public class Lista02 {
                            "Este programa recebe um número e retorna se este é par, ímpar ou zero.\n");
         System.out.print("Digite um número inteiro: ");
         num = sc.nextInt();
-        sc.close();
+        //sc.close();
 
         if (num == 0) {
             System.out.println("O número digitado é zero.");
@@ -35,7 +35,7 @@ public class Lista02 {
         x = sc.nextFloat();
         System.out.print("Digite o segundo número: ");
         y = sc.nextFloat();
-        sc.close();
+        //sc.close();
 
         if (x == y) {
             System.out.println("Os números " + x + " e " + y + " são iguais.");
@@ -60,14 +60,14 @@ public class Lista02 {
                            "Este programa fará 3 perguntas para decidir se você vai para a fila comum ou preferencial.\n");
         System.out.print("Digite seu nome: ");
         nome = scString.nextLine();
-        scString.close();
+        //scString.close();
 
         System.out.print("Qual é a sua idade?: ");
         idade = scInt.nextInt();
-        scInt.close();
+        //scInt.close();
         if (idade >= 65) {
             System.out.println(nome + MENSAGEM_PREFERENCIAL);
-            scChar.close();
+            //scChar.close();
             return;
         }
 
@@ -75,13 +75,13 @@ public class Lista02 {
         pcd = scChar.next().charAt(0);
         if (pcd == 's') {
             System.out.println(nome + MENSAGEM_PREFERENCIAL);
-            scChar.close();
+            //scChar.close();
             return;
         }
 
         System.out.print("Você é gestante? (s/n): ");
         gestante = scChar.next().charAt(0);
-        scChar.close();
+        //scChar.close();
         if (gestante == 's') {
             System.out.println(nome + MENSAGEM_PREFERENCIAL);
             return;
@@ -101,10 +101,10 @@ public class Lista02 {
                            "Este programa recebe a idade de um cliente e retorna se este pode ou não entrar num evento.\n");
         System.out.print("Digite seu nome: ");
         nome = scString.nextLine();
-        scString.close();
+        //scString.close();
         System.out.println("Digite sua idade: ");
         idade = scInt.nextInt();
-        scInt.close();
+        //scInt.close();
 
         if (idade < 16) {
             System.out.println(nome + ", você não pode participar neste evento.");
@@ -128,7 +128,7 @@ public class Lista02 {
         userDigitado = sc.nextLine();
         System.out.print("Digite sua senha: ");
         senhaDigitada = sc.nextLine();
-        sc.close();
+        //sc.close();
 
         if (!(user.equals(userDigitado)) && !(senha.equals(senhaDigitada))) {
             System.out.println("Username e senha incorretos.\nO login falhou.");
@@ -157,18 +157,18 @@ public class Lista02 {
 
         if (media >= 6) {
             System.out.println("Parabéns! Você está aprovad@!");
-            sc.close();
+            //sc.close();
             return;
         } else if (maiorNota < 2) {
             System.out.println("Você reprovou...");
-            sc.close();
+            //sc.close();
             return;
         }
 
         System.out.print("Você está de recuperação.\n" +
                          "Digite sua nota de recuperação: ");
         notaRec = sc.nextFloat();
-        sc.close();
+        //sc.close();
         media = (maiorNota + notaRec) / 2;
 
         if (media >= 6) {
@@ -187,7 +187,7 @@ public class Lista02 {
         numero = sc.nextInt();
         System.out.print("Digite um número inteiro para ser seu divisor: ");
         divisor = sc.nextInt();
-        sc.close();
+        //sc.close();
 
         if (numero % divisor == 0) {
             System.out.println("O número " + numero + " é divisível por " + divisor + ".");
@@ -196,38 +196,72 @@ public class Lista02 {
         }
     }
 
+    public int vidas = 3;
     void ex8() {
-        Scanner sc = new Scanner(System.in);
-        int resposta, erros = 0;
+        String mensagem = "Erros máximos excedidos. Você perdeu!";
 
         System.out.println("===== Hora do Quiz =====\n" +
                            "Este programa é um jogo de perguntas e respostas.\n");
-        System.out.println("Como é o nome do país Holanda em holandês?\n" +
-                           "1. Neverland           2. Nederland\n" +
-                           "3. Holland             4. Netherlands\n\n" +
-                           "Resposta: ");
-        resposta = sc.nextInt();
-        if (resposta != 2) {
-            erros++;
+        System.out.print("Como é o nome do país Holanda em holandês?\n" +
+                         "1. Neverland           2. Nederland\n" +
+                         "3. Holland             4. Netherlands\n\n" +
+                         "Resposta: ");
+        confereResposta(2);
+
+        System.out.print("Qual destes NÃO é o nome de um personagem da série Super Mario?\n" +
+                         "1. Daisy               2. Kamek\n" +
+                         "3. Birdo               4. Kinsley\n\n" +
+                         "Resposta: ");
+        confereResposta(4);
+
+        System.out.print("Qual destes prefixos do Sistema Internacional de unidades significa 10^12?\n" +
+                         "1. Tera                2. Mega\n" +
+                         "3. Zetta               4. Hecto\n\n" +
+                         "Resposta: ");
+        confereResposta(1);
+
+        if (vidas == 0) {
+            System.out.println(mensagem);
+            return;
         }
 
-        System.out.println("Qual destes NÃO é o nome de um personagem da série Super Mario?\n" +
-                           "1. Daisy               2. Kamek\n" +
-                           "3. Birdo               4. Kinsley\n\n" +
-                           "Resposta: ");
-        resposta = sc.nextInt();
-        if (resposta != 4) {
-            erros++;
+        System.out.print("O nome da empresa de brinquedos Lego vem da frase dinamarquesa \"leg godt\", que significa:\n" +
+                         "1. Encaixar bem        2. Brincar bem\n" +
+                         "3. Bem caro            4. Construir bem alto\n\n" +
+                         "Resposta: ");
+        confereResposta(2);
+
+        if (vidas == 0) {
+            System.out.println(mensagem);
+            return;
         }
 
-        System.out.println("\n" +
-                           "1. Daisy               2. Kamek\n" +
-                           "3. Birdo               4. Kinsley\n\n" +
-                           "Resposta: ");
-        resposta = sc.nextInt();
-        if (resposta != 4) {
-            erros++;
+        System.out.print("Quais dessas comidas é, apesar do nome, uma invenção brasileira?\n" +
+                         "1. Filé a parmegiana  2. Pão francês\n" +
+                         "3. Limonada suíça     4. Todas as anteriores\n\n" +
+                         "Resposta: ");
+        confereResposta(4);
+
+        if (vidas == 0) {
+            System.out.println(mensagem);
+            return;
         }
-        sc.close();
+
+        System.out.println("Parabéns! Você ganhou um trilhão de dólares!\n" +
+                           "Número total de acertos: " + (2 + vidas));
+    }
+
+    public void confereResposta(int opcaoCorreta) {
+        Scanner sc = new Scanner(System.in);
+        int resposta = sc.nextInt();
+        //sc.close();
+        if (resposta != opcaoCorreta) {
+            vidas--;
+            System.out.println("Resposta errada!\n" +
+                               "Número de vidas restantes: " + vidas +
+                               "\nA resposta correta é " + opcaoCorreta + "\n");
+        } else {
+            System.out.println("Resposta correta!\n");
+        }
     }
 }
