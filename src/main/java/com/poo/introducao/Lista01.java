@@ -27,10 +27,10 @@ public class Lista01 {
 
         System.out.print("Digite seu primeiro nome: ");
         nome = scanner.nextLine();
-        System.out.print("Digite seu sobrenome");
+        System.out.print("Digite seu sobrenome: ");
         sobrenome = scanner.nextLine();
 
-        System.out.println("Bem vindo, " + nome + " " + sobrenome);
+        System.out.println("Bem vindo, " + nome + " " + sobrenome + ".");
         scanner.close();
     }
 
@@ -92,7 +92,7 @@ public class Lista01 {
         System.out.print("Digite o total de combustível gasto, em litros: ");
         combustivel = scanner.nextFloat();
 
-        consumoMedio = combustivel / distancia;
+        consumoMedio = distancia / combustivel;
         System.out.println("O consumo médio durante esse percurso foi de " + consumoMedio + " km/L");
         scanner.close();
     }
@@ -109,7 +109,7 @@ public class Lista01 {
         nota4 = scanner.nextFloat();
 
         media = (nota1 + nota2 + nota3 + nota4) / 4;
-        System.out.println("A média de suas notas foi " + media);
+        System.out.println("A média de suas notas foi " + String.format("%.2f", media) );
         scanner.close();
     }
 
@@ -122,7 +122,7 @@ public class Lista01 {
         grauF = scanner.nextFloat();
 
         grauC = (grauF - 32) * 5 / 9;
-        System.out.println("A temperatura convertida para graus Celsius é " + grauC + " °C");
+        System.out.println("A temperatura convertida para graus Celsius é " + String.format("%.1f", grauC) + " °C");
         scanner.close();
     }
 }

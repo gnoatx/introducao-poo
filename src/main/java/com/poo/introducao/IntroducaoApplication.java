@@ -11,8 +11,8 @@ public class IntroducaoApplication {
 
         limpa();
 
-		Lista01 lista01 = new Lista01(); // <-- Mudar lista aqui
-        lista01.ex1();  // <-- Mudar exercício aqui
+		Lista02 lista = new Lista02(); // <-- Mudar lista aqui
+        lista.ex5();  // <-- Mudar exercício aqui
 
         System.out.println("Obrigado por utilizar meu programa.");
 	}

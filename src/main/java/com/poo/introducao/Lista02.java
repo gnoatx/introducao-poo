@@ -117,8 +117,38 @@ public class Lista02 {
 
     void ex5() {
         Scanner sc = new Scanner(System.in);
-        
-        
+
+        float nota1, nota2, maiorNota, notaRec, media;
+
+        System.out.println("===== Passou ou Reprovou =====\n" +
+                           "Este programa recebe as notas de um aluno e retorna se este passou ou reprovou.\n");
+        System.out.print("Digite sua nota da primeira prova: ");
+        nota1 = sc.nextFloat();
+        System.out.print("Digite sua nota da segunda prova: ");
+        nota2 = sc.nextFloat();
+        maiorNota = (nota1 >= nota2) ? nota1 : nota2;
+        media = (nota1 + nota2) / 2;
+
+        if (media >= 6) {
+            System.out.println("Parabéns! Você está aprovad@!");
+            sc.close();
+            return;
+        } else if (maiorNota < 2) {
+            System.out.println("Você reprovou...");
+            sc.close();
+            return;
+        }
+
+        System.out.print("Você está de recuperação.\n" +
+                         "Digite sua nota de recuperação: ");
+        notaRec = sc.nextFloat();
+        media = (maiorNota + notaRec) / 2;
+
+        if (media >= 6) {
+            System.out.println("Parabéns! Você está aprovad@!");
+        } else {
+            System.out.println("Você reprovou...");
+        }
         sc.close();
     }
 }
