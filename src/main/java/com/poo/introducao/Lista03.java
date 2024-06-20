@@ -87,6 +87,41 @@ public class Lista03 {
     }
 
     void ex5() {
-        
+        Scanner sc = new Scanner(System.in);
+        String user = "admin";
+        String senha = "1234";
+        String userDigitado, senhaDigitada;
+        int tentativas = 3;
+
+        System.out.println("===== Login com Tentativas =====\n" +
+                           "Este programa recebe username e senha de um usuário para logá-lo com um máximo de 3 tentativas.\n");
+
+        do {
+            if (tentativas == 1) {
+                System.out.println("Última tentativa! Mais um erro e seu acesso será bloqueado!");
+            }
+            System.out.print("Username: ");
+            userDigitado = sc.nextLine();
+            System.out.print("Senha: ");
+            senhaDigitada = sc.nextLine();
+
+            if (!(user.equals(userDigitado))) {
+                System.out.println("Username incorreto!");
+            } else if (!(senha.equals(senhaDigitada))) {
+                System.out.println("Senha incorreta!");
+            } else {
+                break;
+            }
+
+            tentativas--;
+            if (tentativas > 0) {
+                System.out.println("\nTente novamente.");
+            } else {
+                System.out.println("Tentativas máximas ultrapassadas. Seu acesso foi bloqueado.");
+                return;
+            }
+        } while (!(user.equals(userDigitado)) || !(senha.equals(senhaDigitada)));
+
+        System.out.println("Bem vind@, " + user + "!");
     }
 }
