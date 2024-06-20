@@ -124,4 +124,24 @@ public class Lista03 {
 
         System.out.println("Bem vind@, " + user + "!");
     }
+
+    void ex6() {
+        Scanner sc = new Scanner(System.in);
+        int andares;
+
+        System.out.println("===== Pirâmide =====\n" +
+                           "Este programa desenha uma pirâmide com um número de andares determinado pelo usuário.\n");
+        System.out.print("Digite o número de andares desejado: ");
+        andares = sc.nextInt();
+
+        for (int i = 1; i <= andares; i++) {
+            for (int j = andares - i; j > 0 ; j--) {
+                System.out.print(" ");
+            }
+            for (int k = (i * 2) - 1; k > 0; k--) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+    }
 }
