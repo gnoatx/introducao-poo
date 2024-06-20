@@ -23,11 +23,12 @@ public class IntroducaoApplication {
                              "0. Sair do programa\n" +
                              "Opção: ");
             opcao = scannerOpcao.nextInt();
+            limpa();
             switch (opcao) {
                 case 0:
                     break;
                 case 1:
-                    System.out.print("===== Menu =====\n\n" +
+                    System.out.print("===== Lista 01 =====\n\n" +
                                      "1 - 8. Executar exercício de número correspondente\n" +
                                      "0. Sair do programa\n" +
                                      "Opção: ");
@@ -65,7 +66,7 @@ public class IntroducaoApplication {
                     }
                     break;
                 case 2:
-                    System.out.print("===== Menu =====\n\n" +
+                    System.out.print("===== Lista 02 =====\n\n" +
                                      "1 - 8. Executar exercício de número correspondente\n" +
                                      "0. Sair do programa\n" +
                                      "Opção: ");
@@ -103,7 +104,7 @@ public class IntroducaoApplication {
                     }
                     break;
                 case 3:
-                    System.out.print("===== Menu =====\n\n" +
+                    System.out.print("===== Lista 03 =====\n\n" +
                                      "1 - 7. Executar exercício de número correspondente\n" +
                                      "0. Sair do programa\n" +
                                      "Opção: ");
@@ -131,7 +132,7 @@ public class IntroducaoApplication {
                             lista03.ex6();
                             break;
                         case 7:
-                            // lista03.ex7();
+                            lista03.ex7();
                             break;
                         default:
                             System.out.println("Opção inválida.");

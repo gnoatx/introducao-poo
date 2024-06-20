@@ -133,12 +133,33 @@ public class Lista03 {
                            "Este programa desenha uma pirâmide com um número de andares determinado pelo usuário.\n");
         System.out.print("Digite o número de andares desejado: ");
         andares = sc.nextInt();
+        System.out.print("\n");
 
         for (int i = 1; i <= andares; i++) {
             for (int j = andares - i; j > 0 ; j--) {
                 System.out.print(" ");
             }
             for (int k = (i * 2) - 1; k > 0; k--) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    void ex7() {
+        Scanner sc = new Scanner(System.in);
+        int w, h;
+
+        System.out.println("===== Retângulo =====\n" +
+                           "Este programa desenha um retângulo com as dimensões determinadas pelo usuário.\n");
+        System.out.print("Largura: ");
+        w = sc.nextInt();
+        System.out.print("Altura: ");
+        h = sc.nextInt();
+        System.out.print("\n");
+
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
                 System.out.print("*");
             }
             System.out.print("\n");
