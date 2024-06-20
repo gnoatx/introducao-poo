@@ -13,12 +13,13 @@ public class IntroducaoApplication {
 
 		Lista01 lista01 = new Lista01();
         Lista02 lista02 = new Lista02();
+        Lista03 lista03 = new Lista03();
         Scanner scannerOpcao = new Scanner(System.in);
         int opcao;
 
         do {
             System.out.print("\n\n===== Menu =====\n\n" +
-                             "1 - 2. Abrir lista de número correspondente\n" +
+                             "1 - 3. Abrir lista de número correspondente\n" +
                              "0. Sair do programa\n" +
                              "Opção: ");
             opcao = scannerOpcao.nextInt();
@@ -96,6 +97,41 @@ public class IntroducaoApplication {
                             break;
                         case 8:
                             lista02.ex8();
+                            break;
+                        default:
+                            System.out.println("Opção inválida.");
+                    }
+                    break;
+                case 3:
+                    System.out.print("===== Menu =====\n\n" +
+                                     "1 - 7. Executar exercício de número correspondente\n" +
+                                     "0. Sair do programa\n" +
+                                     "Opção: ");
+                    opcao = scannerOpcao.nextInt();
+                    limpa();
+                    switch(opcao) {
+                        case 0:
+                            break;
+                        case 1:
+                            lista03.ex1();
+                            break;
+                        case 2:
+                            // lista03.ex2();
+                            break;
+                        case 3:
+                            // lista03.ex3();
+                            break;
+                        case 4:
+                            // lista03.ex4();
+                            break;
+                        case 5:
+                            // lista03.ex5();
+                            break;
+                        case 6:
+                            // lista03.ex6();
+                            break;
+                        case 7:
+                            // lista03.ex7();
                             break;
                         default:
                             System.out.println("Opção inválida.");
