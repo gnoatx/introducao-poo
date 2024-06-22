@@ -20,7 +20,7 @@ public class IntroducaoApplication {
 
         do {
             System.out.print("\n\n===== Menu =====\n\n" +
-                             "1 - 3. Abrir lista de número correspondente\n" +
+                             "1 - 4. Abrir lista de número correspondente\n" +
                              "0. Sair do programa\n" +
                              "Opção: ");
             opcao = scannerOpcao.nextInt();
@@ -162,16 +162,16 @@ public class IntroducaoApplication {
                             lista04.ex4();
                             break;
                         case 5:
-                            // lista04.ex5();
+                            lista04.menuListaDeCompras();
                             break;
                         case 6:
-                            // lista04.ex6();
+                            lista04.menuListaDeCompras();
                             break;
                         case 7:
-                            // lista04.ex7();
+                            lista04.menuListaDeCompras();
                             break;
                         case 8:
-                            // lista04.ex8();
+                            lista04.menuListaDeCompras();
                             break;
                         default:
                             System.out.println("Opção inválida.");

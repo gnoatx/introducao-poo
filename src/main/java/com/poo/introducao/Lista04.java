@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class Lista04 {
 
     public ArrayList<Double> vendas = new ArrayList<Double>();
-
     void recebeVendas() {
         Scanner scDouble = new Scanner(System.in);
         Scanner scChar = new Scanner(System.in);
@@ -87,4 +86,83 @@ public class Lista04 {
             }
         }
     }
+
+    public static ArrayList<String> listaDeCompras = new ArrayList<String>();
+    void menuListaDeCompras() {
+        Scanner sc = new Scanner(System.in);
+        char opcao;
+
+        System.out.println("===== Lista de Compras =====\n" +
+                           "Este programa permite o usuário de criar e manipular uma lista de compras.\n");
+
+        do {
+            System.out.println("===== Menu =====\n" +
+                               "Número de itens: " + listaDeCompras.size() + "\n");
+            System.out.print("1. Inserir item\n" +
+                             "2. Ver lista\n" +
+                             "0. Sair do programa.\n\n" +
+                             "Opção: ");
+            opcao = sc.nextLine().charAt(0);
+
+            limpa();
+            switch (opcao) {
+                case '1':
+                    ex5.inserirItem();
+                    limpa();
+                    break;
+                case '2':
+                    ex5.verLista();
+                    limpa();
+                    break;
+                case '0':
+                    System.out.println("Saindo do programa...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
+            }
+        } while (opcao != '0');
+    }
+
+    class ex5 {
+        static void inserirItem() {
+            Scanner sc = new Scanner(System.in);
+            String input;
+
+            System.out.println("Digite os itens que deseja inserir na lista,\n" +
+                               "ou digite '\u001B[36msair\u001B[0m' para voltar ao menu.\n");
+            while (listaDeCompras.size() < Integer.MAX_VALUE) {
+                input = sc.nextLine();
+                if (input.equalsIgnoreCase("sair")) {
+                    break;
+                } else {
+                    listaDeCompras.add(input);
+                }
+            }
+        }
+
+        static void verLista() {
+            Scanner sc = new Scanner(System.in);
+
+            for (int i = 0; i < listaDeCompras.size(); i++) {
+                System.out.println((i + 1) + ". " + listaDeCompras.get(i));
+            }
+            System.out.print("\nPressione \u001B[36mENTER\u001B[0m para voltar para o menu.");
+            sc.nextLine();
+        }
+    }
+
+    static void limpa() {
+		try {
+            if(System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else if(System.getProperty("os.name").contains("Linux") || System.getProperty("os.name").contains("Mac")) {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            } else {
+                System.out.println("Este comando não funciona no seu sistema operacional.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	}
 }
