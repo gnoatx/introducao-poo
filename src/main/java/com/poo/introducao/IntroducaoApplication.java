@@ -153,7 +153,7 @@ public class IntroducaoApplication {
                             lista04.ex1();
                             break;
                         case 2:
-                            // lista04.ex2();
+                            lista04.ex2();
                             break;
                         case 3:
                             // lista04.ex3();

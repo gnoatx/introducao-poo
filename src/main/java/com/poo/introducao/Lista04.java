@@ -35,4 +35,23 @@ public class Lista04 {
 
         System.out.println("A total de vendas do dia foi de R$ " + String.format("%.2f", soma));
     }
+
+    void ex2() {
+        double maior = 0;
+        double menor = Double.MAX_VALUE;
+
+        System.out.println("===== Maior e Menor Vendas =====\n" +
+                           "Este programa recebe uma lista de valores numa ArrayList e retorna o maior valor e o menor valor desta.\n");
+
+        recebeVendas();
+        for (Double d : vendas) {
+            maior = (d > maior) ? d : maior;
+        }
+        for (Double d : vendas) {
+            menor = (d < menor) ? d : menor;
+        }
+
+        System.out.println("A maior venda do dia foi de R$ " + String.format("%.2f", maior));
+        System.out.println("A menor venda do dia foi de R$ " + String.format("%.2f", menor));
+    }
 }
