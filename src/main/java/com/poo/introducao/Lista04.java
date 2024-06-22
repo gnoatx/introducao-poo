@@ -88,8 +88,8 @@ public class Lista04 {
         }
     }
 
-    public static ArrayList<String> listaDeCompras = new ArrayList<>(Arrays.asList("a", "b", "c", "d", "e"));
-    public static ArrayList<Double> precosListaDeCompras = new ArrayList<>(Arrays.asList(9.0, 8.0, 7.0, 6.0, 5.0));
+    public static ArrayList<String> listaDeCompras = new ArrayList<>(Arrays.asList("Manteiga", "Requeijão", "Alface", "Pão de Queijo", "Polvo"));
+    public static ArrayList<Double> precosListaDeCompras = new ArrayList<>(Arrays.asList(7.50, 4.25, 2.00, 12.99, 55.50));
     void menuListaDeCompras() {
         Scanner sc = new Scanner(System.in);
         char opcao;
@@ -176,7 +176,7 @@ public class Lista04 {
                 for (int j = espacos - itens.get(i).length(); j > 0; j--) {
                     System.out.print(" ");
                 }
-                System.out.println(" ~~ R$ " + String.format("%.2f", valores.get(i)));
+                System.out.println("   R$ " + String.format("%.2f", valores.get(i)));
             }
         }
     }
