@@ -54,4 +54,37 @@ public class Lista04 {
         System.out.println("A maior venda do dia foi de R$ " + String.format("%.2f", maior));
         System.out.println("A menor venda do dia foi de R$ " + String.format("%.2f", menor));
     }
+
+    void ex3() {
+        double soma = 0, media;
+
+        System.out.println("===== Média do Dia =====\n" +
+                           "Este programa recebe uma lista de valores numa ArrayList e retorna a média desta.\n");
+
+        recebeVendas();
+        for (Double d : vendas) {
+            soma += d;
+        }
+        media = soma / vendas.size();
+
+        System.out.println("O valor médio das vendas do dia foi de R$ " + String.format("%.2f", media));
+    }
+
+    void ex4() {
+        int[] lista = { 3, 5, 6, 7, 8, 10, 22, 55, 110 };
+
+        System.out.println("===== Pares num Array =====\n" +
+                           "Este programa retorna todos os números pares num array pré-existente.\n");
+        
+        System.out.println("Os números pares contidos na lista:");
+        for (int i : lista) {
+            System.out.print(i + " ");
+        }
+        System.out.println("\nSão:");
+        for (int i : lista) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
 }
