@@ -14,6 +14,7 @@ public class IntroducaoApplication {
 		Lista01 lista01 = new Lista01();
         Lista02 lista02 = new Lista02();
         Lista03 lista03 = new Lista03();
+        Lista04 lista04 = new Lista04();
         Scanner scannerOpcao = new Scanner(System.in);
         int opcao;
 
@@ -133,6 +134,44 @@ public class IntroducaoApplication {
                             break;
                         case 7:
                             lista03.ex7();
+                            break;
+                        default:
+                            System.out.println("Opção inválida.");
+                    }
+                    break;
+                    case 4:
+                    System.out.print("===== Lista 04 =====\n\n" +
+                                     "1 - 8. Executar exercício de número correspondente\n" +
+                                     "0. Sair do programa\n" +
+                                     "Opção: ");
+                    opcao = scannerOpcao.nextInt();
+                    limpa();
+                    switch(opcao) {
+                        case 0:
+                            break;
+                        case 1:
+                            lista04.ex1();
+                            break;
+                        case 2:
+                            // lista04.ex2();
+                            break;
+                        case 3:
+                            // lista04.ex3();
+                            break;
+                        case 4:
+                            // lista04.ex4();
+                            break;
+                        case 5:
+                            // lista04.ex5();
+                            break;
+                        case 6:
+                            // lista04.ex6();
+                            break;
+                        case 7:
+                            // lista04.ex7();
+                            break;
+                        case 8:
+                            // lista04.ex8();
                             break;
                         default:
                             System.out.println("Opção inválida.");
