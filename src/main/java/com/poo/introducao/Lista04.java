@@ -98,8 +98,9 @@ public class Lista04 {
         do {
             System.out.println("===== Menu =====\n" +
                                "Número de itens: " + listaDeCompras.size() + "\n");
-            System.out.print("1. Inserir item\n" +
+            System.out.print("1. Inserir itens\n" +
                              "2. Ver lista\n" +
+                             "3. Remover itens\n" +
                              "0. Sair do programa.\n\n" +
                              "Opção: ");
             opcao = sc.nextLine().charAt(0);
@@ -108,11 +109,19 @@ public class Lista04 {
             switch (opcao) {
                 case '1':
                     ex5.inserirItem();
-                    limpa();
                     break;
                 case '2':
                     ex5.verLista();
+                    System.out.print("\nPressione \u001B[36mENTER\u001B[0m para voltar para o menu.");
+                    sc.nextLine();
                     limpa();
+                    break;
+                case '3':
+                    if (listaDeCompras.size() > 0) {
+                        ex6.removerItem();
+                    } else {
+                        System.out.println("A lista está vazia.");
+                    }
                     break;
                 case '0':
                     System.out.println("Saindo do programa...");
@@ -139,16 +148,46 @@ public class Lista04 {
                     listaDeCompras.add(input);
                 }
             }
+            limpa();
         }
 
         static void verLista() {
-            Scanner sc = new Scanner(System.in);
-
             for (int i = 0; i < listaDeCompras.size(); i++) {
                 System.out.println((i + 1) + ". " + listaDeCompras.get(i));
             }
-            System.out.print("\nPressione \u001B[36mENTER\u001B[0m para voltar para o menu.");
-            sc.nextLine();
+        }
+    }
+
+    class ex6 {
+        static void removerItem() {
+            Scanner scInt = new Scanner(System.in);
+            Scanner scChar = new Scanner(System.in);
+            int input;
+            char confirma;
+
+            while (listaDeCompras.size() > 0) {
+                ex5.verLista();
+                System.out.println("\nDigite o índice do item a ser removido,\n" +
+                                   "ou digite '\u001B[36m0\u001B[0m' para voltar ao menu.\n");
+                System.out.print("Opção: ");
+                input = scInt.nextInt();
+
+                limpa();
+                if (input == 0) {
+                    break;
+                } else if (input < listaDeCompras.size()) {
+                    System.out.print("Remover o item " + input + ". " + listaDeCompras.get(input - 1) + "? (\u001B[36ms\u001B[0m/\u001B[36mn\u001B[0m): ");
+                    confirma = scChar.nextLine().charAt(0);
+                    if (Character.toLowerCase(confirma) == 's') {
+                        listaDeCompras.remove(input - 1);
+                        System.out.println("Item removido com sucesso.\n");
+                    } else {
+                        System.out.println("Ação cancelada.\n");
+                    }
+                } else {
+                    System.out.println("Opção inválida.\n");
+                }
+            }
         }
     }
 
