@@ -29,7 +29,7 @@ public class Lista04 {
                            "Este programa recebe uma lista de valores numa ArrayList e faz a soma desta.\n");
 
         recebeVendas();
-        for (Double d : vendas) {
+        for (double d : vendas) {
             soma += d;
         }
 
@@ -44,10 +44,10 @@ public class Lista04 {
                            "Este programa recebe uma lista de valores numa ArrayList e retorna o maior valor e o menor valor desta.\n");
 
         recebeVendas();
-        for (Double d : vendas) {
+        for (double d : vendas) {
             maior = (d > maior) ? d : maior;
         }
-        for (Double d : vendas) {
+        for (double d : vendas) {
             menor = (d < menor) ? d : menor;
         }
 
@@ -62,7 +62,7 @@ public class Lista04 {
                            "Este programa recebe uma lista de valores numa ArrayList e retorna a média desta.\n");
 
         recebeVendas();
-        for (Double d : vendas) {
+        for (double d : vendas) {
             soma += d;
         }
         media = soma / vendas.size();
